@@ -15,7 +15,7 @@ public class LoginController {
     private LoginService loginService;
     @ApiOperation(value = "用户登录",notes = "调用wx.login返回一个code以后，向后端发起登录请求，后端维护登录态",response = String.class)
     @ApiImplicitParam(name ="jscode" ,value="前端调用wx.login返回的js_code",paramType = "query",dataType = "String")
-    @RequestMapping(value="/login",method = RequestMethod.GET)
+    @RequestMapping(value="/login",method = RequestMethod.POST)
     public String login(@ApiParam String jscode){
         return loginService.login(jscode);
     }

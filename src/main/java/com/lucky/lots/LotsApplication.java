@@ -7,10 +7,9 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 public class LotsApplication extends SpringBootServletInitializer {
-
 	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(LotsApplication.class);
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(LotsApplication.class);
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(LotsApplication.class, args);
